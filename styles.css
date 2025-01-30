@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    margin: 0;
+    margin: 10px;
     padding: 10px; /* Added 10px padding to the overall page */
     line-height: 1.6;
     transition: background-color 0.3s, color 0.3s;
