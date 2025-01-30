@@ -1,8 +1,8 @@
 /* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    margin: 10px;
-    padding: 10px; /* Added 10px padding to the overall page */
+    margin: 0;
+    padding: 0;
     line-height: 1.6;
     transition: background-color 0.3s, color 0.3s;
 }
@@ -14,7 +14,9 @@ body.dark-theme {
 }
 
 body.dark-theme header .name {
-    color: #ffffff; /* White text in dark theme */
+    background: linear-gradient(90deg, #77aaff, #ff6b6b); /* Gradient for dark theme */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* Light Theme */
@@ -24,13 +26,16 @@ body.light-theme {
 }
 
 body.light-theme header .name {
-    color: #333; /* Dark text in light theme */
+    background: linear-gradient(90deg, #77aaff, #ff6b6b); /* Gradient for light theme */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .container {
     width: 90%;
     margin: 0 auto;
     max-width: 1200px;
+    padding: 0 20px; /* Added padding to container */
 }
 
 /* Header */
@@ -47,6 +52,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 20px; /* Added padding to header content */
 }
 
 .profile {
@@ -73,6 +79,9 @@ header {
     font-weight: 600;
     font-family: 'Roboto Mono', monospace;
     transition: color 0.3s ease; /* Smooth transition for text color */
+    background: linear-gradient(90deg, #77aaff, #ff6b6b); /* Gradient for name */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .theme-toggle {
@@ -126,7 +135,7 @@ header {
 
 /* Body Sections */
 .section {
-    padding: 80px 0;
+    padding: 80px 20px; /* Added padding to sections */
     text-align: center;
 }
 
@@ -154,7 +163,7 @@ header {
 /* Footer */
 footer {
     background-color: #333;
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
     border-top: 2px solid #77aaff;
 }
@@ -210,7 +219,7 @@ footer p {
     }
 
     .section {
-        padding: 50px 0;
+        padding: 50px 20px; /* Adjusted padding for smaller screens */
     }
 
     .section h1 {
