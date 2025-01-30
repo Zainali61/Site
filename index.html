@@ -8,13 +8,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="dark-theme">
     <!-- Header -->
     <header>
         <div class="header-content">
             <div class="profile">
                 <img src="profile-pic.jpg" alt="Zain Ali" class="profile-pic">
                 <span class="name">Zain Ali</span>
+            </div>
+            <div class="theme-toggle" id="theme-toggle">
+                <i class="fas fa-moon"></i> <!-- Moon icon for dark theme -->
             </div>
             <div class="menu-icon" id="menu-icon">
                 <i class="fas fa-ellipsis-v"></i>
@@ -72,11 +75,23 @@
 
     <!-- JavaScript -->
     <script>
+        // Toggle Menu
         const menuIcon = document.getElementById('menu-icon');
         const menu = document.getElementById('menu');
 
         menuIcon.addEventListener('click', () => {
             menu.classList.toggle('active');
+        });
+
+        // Toggle Theme
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            body.classList.toggle('light-theme');
+            const isLightTheme = body.classList.contains('light-theme');
+            themeToggle.innerHTML = isLightTheme ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
         });
     </script>
 </body>
