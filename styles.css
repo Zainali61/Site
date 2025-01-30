@@ -148,6 +148,17 @@ header {
     color: inherit;
 }
 
+/* Highlight Zain Ali in #home section */
+#home p {
+    font-size: 1.2rem; /* Slightly larger font size */
+}
+
+#home p strong {
+    color: #77aaff; /* Website theme color */
+    text-decoration: underline; /* Underlined */
+    font-size: 1.3rem; /* Slightly bigger font size */
+}
+
 /* Footer */
 footer {
     background-color: #333;
@@ -220,6 +231,14 @@ footer p {
 
     .section p {
         font-size: 1rem;
+    }
+
+    #home p {
+        font-size: 1.1rem; /* Adjusted font size for smaller screens */
+    }
+
+    #home p strong {
+        font-size: 1.2rem; /* Adjusted font size for smaller screens */
     }
 }
 
