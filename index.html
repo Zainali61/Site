@@ -14,7 +14,7 @@
         <div class="header-content">
             <div class="profile">
                 <img src="profile-pic.jpg" alt="Zain Ali" class="profile-pic">
-                <span class="name">Zain Ali</span>
+                <h1 class="name">Zain Ali</h1> <!-- Replaced span with h1 -->
             </div>
             <div class="theme-toggle" id="theme-toggle">
                 <i class="fas fa-moon"></i> <!-- Moon icon for dark theme -->
@@ -75,24 +75,24 @@
 
     <!-- JavaScript -->
     <script>
-    // Toggle Menu
-    const menuIcon = document.getElementById('menu-icon');
-    const menu = document.getElementById('menu');
+        // Toggle Menu
+        const menuIcon = document.getElementById('menu-icon');
+        const menu = document.getElementById('menu');
 
-    menuIcon.addEventListener('click', () => {
-        menu.classList.toggle('active');
-    });
+        menuIcon.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
 
-    // Toggle Theme
-    const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
+        // Toggle Theme
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
 
-    themeToggle.addEventListener('click', () => {
-        body.classList.toggle('dark-theme');
-        body.classList.toggle('light-theme');
-        const isLightTheme = body.classList.contains('light-theme');
-        themeToggle.innerHTML = isLightTheme ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-    });
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            body.classList.toggle('light-theme');
+            const isLightTheme = body.classList.contains('light-theme');
+            themeToggle.innerHTML = isLightTheme ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        });
     </script>
 </body>
 </html>
