@@ -6,6 +6,7 @@
     <title>Zain Ali - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
@@ -15,7 +16,10 @@
                 <img src="profile-pic.jpg" alt="Zain Ali" class="profile-pic">
                 <span class="name">Zain Ali</span>
             </div>
-            <nav class="menu">
+            <div class="menu-icon" id="menu-icon">
+                <i class="fas fa-ellipsis-v"></i>
+            </div>
+            <nav class="menu" id="menu">
                 <ul>
                     <li><a href="#home" class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -28,7 +32,7 @@
     <!-- Body Section -->
     <main>
         <section id="home" class="section">
-            <h1>Welcome to My Pixel World!</h1>
+            <h1>Welcome to My Portfolio!</h1>
             <p>
                 Hi, I'm Zain Ali, an Electrical Trainee Engineer with a passion for innovation and technology. 
                 I love working on electrical systems, designing circuits, and solving complex problems. 
@@ -65,5 +69,15 @@
         </div>
         <p>&copy; 2023 Zain Ali. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const menu = document.getElementById('menu');
+
+        menuIcon.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
