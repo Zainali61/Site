@@ -2,7 +2,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 10px; /* Added 10px padding to the overall page */
     line-height: 1.6;
     transition: background-color 0.3s, color 0.3s;
 }
@@ -13,10 +13,18 @@ body.dark-theme {
     color: #ffffff;
 }
 
+body.dark-theme header .name {
+    color: #ffffff; /* White text in dark theme */
+}
+
 /* Light Theme */
 body.light-theme {
     background-color: #f4f4f4;
     color: #333;
+}
+
+body.light-theme header .name {
+    color: #333; /* Dark text in light theme */
 }
 
 .container {
@@ -64,6 +72,7 @@ header {
     font-size: 1.5rem;
     font-weight: 600;
     font-family: 'Roboto Mono', monospace;
+    transition: color 0.3s ease; /* Smooth transition for text color */
 }
 
 .theme-toggle {
