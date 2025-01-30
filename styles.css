@@ -13,22 +13,10 @@ body.dark-theme {
     color: #ffffff;
 }
 
-body.dark-theme header .name {
-    background: linear-gradient(90deg, #77aaff, #ff6b6b); /* Gradient for dark theme */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 /* Light Theme */
 body.light-theme {
     background-color: #f4f4f4;
     color: #333;
-}
-
-body.light-theme header .name {
-    background: linear-gradient(90deg, #77aaff, #ff6b6b); /* Gradient for light theme */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .container {
@@ -78,10 +66,10 @@ header {
     font-size: 1.5rem;
     font-weight: 600;
     font-family: 'Roboto Mono', monospace;
-    transition: color 0.3s ease; /* Smooth transition for text color */
     background: linear-gradient(90deg, #77aaff, #ff6b6b); /* Gradient for name */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin: 0; /* Remove default margin for h1 */
 }
 
 .theme-toggle {
