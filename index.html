@@ -20,7 +20,6 @@
                 <div class="theme-toggle" id="theme-toggle">
                     <i class="fas fa-moon"></i>
                 </div>
-                <!-- Download CV Button -->
                 <a href="CV.pdf" download class="cv-button">
                     Download CV
                 </a>
@@ -32,7 +31,6 @@
                         <li><a href="#home" class="active">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#contact">Contact</a></li>
-                        <!-- Mobile CV Button -->
                         <li class="mobile-cv"><a href="CV.pdf" download>Download CV</a></li>
                     </ul>
                 </nav>
@@ -86,7 +84,6 @@
         <p>&copy; 2025 Zain Ali. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript -->
     <script>
         // Toggle Menu
         const menuIcon = document.getElementById('menu-icon');
@@ -105,6 +102,27 @@
             body.classList.toggle('light-theme');
             const isLightTheme = body.classList.contains('light-theme');
             themeToggle.innerHTML = isLightTheme ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        });
+
+        // Scroll Animation
+        const sections = document.querySelectorAll('.section');
+        const options = {
+            threshold: 0.2
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            section.style.opacity = 0;
+            section.style.transform = 'translateY(20px)';
+            observer.observe(section);
         });
     </script>
 </body>
