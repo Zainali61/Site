@@ -5,17 +5,19 @@ body {
     padding: 0;
     line-height: 1.6;
     transition: background-color 0.3s, color 0.3s;
+    background: linear-gradient(135deg, #1e1e1e, #333); /* Themed background */
+    min-height: 100vh;
 }
 
 /* Dark Theme (Default) */
 body.dark-theme {
-    background-color: #1e1e1e;
+    background: linear-gradient(135deg, #1e1e1e, #333); /* Dark themed background */
     color: #ffffff;
 }
 
 /* Light Theme */
 body.light-theme {
-    background-color: #f4f4f4;
+    background: linear-gradient(135deg, #f4f4f4, #e0e0e0); /* Light themed background */
     color: #333;
 }
 
@@ -28,12 +30,13 @@ body.light-theme {
 
 /* Header */
 header {
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.9); /* Semi-transparent background */
     padding: 10px 0;
     border-bottom: 2px solid #77aaff;
     position: sticky;
     top: 0;
     z-index: 1000;
+    backdrop-filter: blur(10px); /* Blur effect */
 }
 
 .header-content {
@@ -125,6 +128,18 @@ header {
 .section {
     padding: 80px 20px; /* Added padding to sections */
     text-align: center;
+    animation: fadeIn 1s ease-in-out; /* Animation for sections */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .section h1, .section h2 {
@@ -162,12 +177,33 @@ header {
     color: #ff6b6b; /* Change color on hover */
 }
 
+/* Contact Section */
+.contact-info {
+    margin-top: 20px;
+}
+
+.phone-link {
+    color: #77aaff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.phone-link i {
+    margin-right: 10px;
+}
+
+.phone-link:hover {
+    color: #ff6b6b; /* Hover effect for phone link */
+}
+
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.9); /* Semi-transparent background */
     padding: 20px;
     text-align: center;
     border-top: 2px solid #77aaff;
+    backdrop-filter: blur(10px); /* Blur effect */
 }
 
 .social-media {
