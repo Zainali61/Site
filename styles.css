@@ -200,6 +200,10 @@ footer {
     color: #ff6b6b;
 }
 
+.menu ul li.mobile-cv {
+    display: none;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .menu-icon {
