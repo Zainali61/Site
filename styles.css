@@ -75,11 +75,40 @@ header {
     margin: 0; /* Remove default margin for h1 */
 }
 
+/* Header Right Section */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Spacing between elements */
+}
+
+/* Download CV Button */
+.cv-button {
+    color: #ff6b6b; /* Orange theme color */
+    text-decoration: none;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+    font-size: 1rem;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+    border-bottom: 2px solid transparent; /* Underline effect */
+}
+
+.cv-button:hover {
+    color: #ffa500; /* Brighter orange on hover */
+    border-bottom: 2px solid #ffa500; /* Animated underline */
+}
+
+/* Mobile CV Button (hidden on desktop) */
+.mobile-cv {
+    display: none;
+}
+
 .theme-toggle {
     font-size: 1.5rem;
     cursor: pointer;
     color: #ffffff;
-    margin-right: 20px;
     transition: color 0.3s ease;
 }
 
@@ -228,6 +257,25 @@ footer p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .cv-button {
+        display: none; /* Hide desktop CV button on mobile */
+    }
+
+    .mobile-cv {
+        display: block; /* Show mobile CV button in menu */
+        margin-top: 15px;
+    }
+
+    .mobile-cv a {
+        color: #ff6b6b;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .mobile-cv a:hover {
+        color: #ffa500;
+    }
+
     .menu-icon {
         display: block;
     }
