@@ -1,180 +1,149 @@
 /* General Styles */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    transition: background-color 0.3s, color 0.3s;
-    background-image: url('background-img.jpg'); /* Your background image */
+    transition: background-color 0.5s ease, color 0.5s ease;
+    background-image: url('background-img.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     min-height: 100vh;
-    color: #ffffff; /* Default text color */
+    color: #ffffff;
 }
 
 /* Dark Theme (Default) */
 body.dark-theme {
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent overlay */
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #ffffff;
 }
 
 /* Light Theme */
 body.light-theme {
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent overlay */
-    color: #333; /* Light theme text color */
-}
-
-.container {
-    width: 90%;
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 0 20px; /* Added padding to container */
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
 }
 
 /* Header */
 header {
-    background-color: rgba(0, 0, 0, 0.5); /* Transparent black */
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 10px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    backdrop-filter: blur(10px); /* Blur effect */
+    backdrop-filter: blur(10px);
+    transition: all 0.5s ease;
 }
 
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px; /* Added padding to header content */
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .profile {
     display: flex;
     align-items: center;
+    gap: 15px;
 }
 
 .profile-pic {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    margin-right: 10px;
-    border: 2px solid #ff6b6b; /* Orange accent */
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    border: 2px solid #ff6b6b;
+    transition: all 0.3s ease;
 }
 
 .profile-pic:hover {
-    transform: scale(1.1); /* Hover effect: scales up the image */
-    border-color: #ffa500; /* Brighter orange on hover */
+    transform: scale(1.1);
+    border-color: #ffa500;
 }
 
 .name {
-    font-size: 1.5rem;
-    font-weight: 600;
     font-family: 'Roboto Mono', monospace;
-    color: #ff6b6b; /* Orange theme color */
-    margin: 0; /* Remove default margin for h1 */
+    font-size: 1.5rem;
+    color: #ff6b6b;
+    margin: 0;
 }
 
 /* Header Right Section */
 .header-right {
     display: flex;
     align-items: center;
-    gap: 25px; /* Spacing between elements */
+    gap: 25px;
 }
 
 /* Download CV Button */
 .cv-button {
-    color: #ff6b6b; /* Orange theme color */
+    color: #ff6b6b;
     text-decoration: none;
     font-family: 'Roboto Mono', monospace;
     font-weight: 500;
-    font-size: 1rem;
-    position: relative;
     padding: 5px 0;
-    transition: color 0.3s ease;
-    border-bottom: 2px solid transparent; /* Underline effect */
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
 }
 
 .cv-button:hover {
-    color: #ffa500; /* Brighter orange on hover */
-    border-bottom: 2px solid #ffa500; /* Animated underline */
+    color: #ffa500;
+    border-bottom: 2px solid #ffa500;
 }
 
-/* Mobile CV Button (hidden on desktop) */
-.mobile-cv {
-    display: none;
-}
-
+/* Theme Toggle */
 .theme-toggle {
     font-size: 1.5rem;
     cursor: pointer;
     color: #ffffff;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .theme-toggle:hover {
-    color: #ff6b6b; /* Orange hover effect */
+    color: #ff6b6b;
 }
 
-.menu-icon {
-    display: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #ffffff;
-    transition: color 0.3s ease;
-}
-
-.menu-icon:hover {
-    color: #ff6b6b; /* Orange hover effect */
-}
-
+/* Menu */
 .menu ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-}
-
-.menu ul li {
-    margin-left: 20px;
+    gap: 20px;
 }
 
 .menu ul li a {
     color: #ffffff;
     text-decoration: none;
-    font-weight: 600;
     padding: 5px 10px;
-    transition: background-color 0.3s, color 0.3s;
+    transition: all 0.3s ease;
 }
 
 .menu ul li a:hover {
-    background-color: #ff6b6b; /* Orange hover effect */
-    color: #000000; /* Black text on hover */
-    border-radius: 5px;
+    color: #ff6b6b;
 }
 
-/* Body Sections */
+/* Sections */
 .section {
-    padding: 80px 20px; /* Added padding to sections */
-    text-align: center;
-    animation: fadeIn 1s ease-in-out; /* Animation for sections */
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
 }
 
 .section h1, .section h2 {
-    color: #ff6b6b; /* Orange theme color */
     font-family: 'Roboto Mono', monospace;
-    font-weight: 600;
+    color: #ff6b6b;
+    margin-bottom: 20px;
 }
 
 .section h1 {
@@ -185,25 +154,15 @@ header {
     font-size: 2rem;
 }
 
-.section p {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.1rem;
-    color: inherit;
-}
-
-/* Highlight Zain Ali in #home section */
 .highlight-name {
-    color: #ff6b6b; /* Orange theme color */
-    text-decoration: underline; /* Underlined */
-    font-size: 1.3rem; /* Slightly bigger font size */
-    font-weight: 600; /* Bold text */
-    transition: color 0.3s ease; /* Smooth transition for hover effect */
+    color: #ff6b6b;
+    text-decoration: underline;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
-/* Hover effect for the highlighted name */
 .highlight-name:hover {
-    color: #ffa500; /* Brighter orange on hover */
+    color: #ffa500;
 }
 
 /* Contact Section */
@@ -212,70 +171,37 @@ header {
 }
 
 .phone-link {
-    color: #ff6b6b; /* Orange theme color */
+    color: #ff6b6b;
     text-decoration: none;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-}
-
-.phone-link i {
-    margin-right: 10px;
+    transition: all 0.3s ease;
 }
 
 .phone-link:hover {
-    color: #ffa500; /* Brighter orange on hover */
+    color: #ffa500;
 }
 
 /* Footer */
 footer {
-    background-color: rgba(0, 0, 0, 0.5); /* Transparent black */
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
     text-align: center;
-    backdrop-filter: blur(10px); /* Blur effect */
-}
-
-.social-media {
-    margin-bottom: 10px;
+    backdrop-filter: blur(10px);
+    margin-top: 50px;
 }
 
 .social-media a {
     color: #ffffff;
     margin: 0 10px;
     font-size: 1.5rem;
-    transition: color 0.3s;
+    transition: all 0.3s ease;
 }
 
 .social-media a:hover {
-    color: #ff6b6b; /* Orange hover effect */
-}
-
-footer p {
-    margin: 0;
-    font-size: 0.9rem;
-    color: #cccccc;
+    color: #ff6b6b;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .cv-button {
-        display: none; /* Hide desktop CV button on mobile */
-    }
-
-    .mobile-cv {
-        display: block; /* Show mobile CV button in menu */
-        margin-top: 15px;
-    }
-
-    .mobile-cv a {
-        color: #ff6b6b;
-        text-decoration: none;
-        font-weight: 600;
-    }
-
-    .mobile-cv a:hover {
-        color: #ffa500;
-    }
-
     .menu-icon {
         display: block;
     }
@@ -285,10 +211,10 @@ footer p {
         position: absolute;
         top: 60px;
         right: 20px;
-        background-color: rgba(0, 0, 0, 0.8); /* Transparent black */
-        border: 1px solid #ff6b6b; /* Orange border */
+        background-color: rgba(0, 0, 0, 0.8);
+        border: 1px solid #ff6b6b;
         border-radius: 5px;
-        padding: 10px;
+        padding: 15px;
     }
 
     .menu.active {
@@ -297,44 +223,15 @@ footer p {
 
     .menu ul {
         flex-direction: column;
+        gap: 10px;
     }
 
-    .menu ul li {
-        margin: 10px 0;
+    .cv-button {
+        display: none;
     }
 
-    .section {
-        padding: 50px 20px; /* Adjusted padding for smaller screens */
-    }
-
-    .section h1 {
-        font-size: 2rem;
-    }
-
-    .section h2 {
-        font-size: 1.5rem;
-    }
-
-    .section p {
-        font-size: 1rem;
-    }
-
-    .highlight-name {
-        font-size: 1.2rem; /* Adjusted font size for smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .profile-pic {
-        width: 40px;
-        height: 40px;
-    }
-
-    .name {
-        font-size: 1.2rem;
-    }
-
-    .menu ul li a {
-        font-size: 0.9rem;
+    .mobile-cv {
+        display: block;
+        margin-top: 15px;
     }
 }
